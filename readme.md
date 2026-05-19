@@ -32,3 +32,9 @@ Eksperimen ini bertujuan untuk menambahkan informasi IP dan port pengirim pada s
 
 ### Tujuan
 Eksperimen ini bertujuan untuk menjalankan webchat menggunakan Yew sebagai frontend Rust WebAssembly. Webclient dibuat dengan Rust dan dikompilasi ke WebAssembly agar dapat berjalan di browser. Server websocket yang digunakan pada eksperimen ini adalah server JavaScript sederhana.
+
+## Experiment 3.2: Be Creative!
+
+### Tujuan
+Eksperimen ini bertujuan untuk menambahkan kreativitas pada webclient Yew. Saya memodifikasi tampilan agar aplikasi chat terlihat lebih rapi, modern, dan mudah digunakan.
+

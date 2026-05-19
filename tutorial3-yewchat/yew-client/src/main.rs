@@ -140,38 +140,199 @@ fn app() -> Html {
     };
 
     html! {
-        <div style="max-width: 720px; margin: 40px auto; font-family: Arial, sans-serif;">
-            <h1>{ "YewChat - Original" }</h1>
-            <p>{ format!("Status: {}", *connection_status) }</p>
+        <>
+            <style>
+                {"
+                    body {
+                        margin: 0;
+                        min-height: 100vh;
+                        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+                        font-family: Arial, sans-serif;
+                    }
 
-            <div style="border: 1px solid #ccc; padding: 16px; min-height: 300px; margin-bottom: 12px;">
-                {
-                    for messages.iter().map(|message| {
-                        html! {
-                            <p>
-                                <strong>{ format!("{}: ", message.user) }</strong>
-                                { &message.message }
-                            </p>
+                    .page {
+                        max-width: 860px;
+                        margin: 0 auto;
+                        padding: 40px 20px;
+                    }
+
+                    .app-card {
+                        background: white;
+                        border-radius: 24px;
+                        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.14);
+                        overflow: hidden;
+                        border: 1px solid #e2e8f0;
+                    }
+
+                    .header {
+                        padding: 28px;
+                        background: #1e293b;
+                        color: white;
+                    }
+
+                    .title {
+                        margin: 0;
+                        font-size: 32px;
+                    }
+
+                    .subtitle {
+                        margin-top: 8px;
+                        opacity: 0.85;
+                    }
+
+                    .status {
+                        display: inline-block;
+                        margin-top: 14px;
+                        padding: 6px 12px;
+                        border-radius: 999px;
+                        background: #22c55e;
+                        color: #052e16;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+
+                    .chat-area {
+                        min-height: 360px;
+                        max-height: 420px;
+                        overflow-y: auto;
+                        padding: 24px;
+                        background: #f8fafc;
+                    }
+
+                    .message-row {
+                        display: flex;
+                        gap: 12px;
+                        align-items: flex-start;
+                        margin-bottom: 16px;
+                    }
+
+                    .avatar {
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #dbeafe;
+                        font-size: 22px;
+                    }
+
+                    .bubble {
+                        background: white;
+                        border: 1px solid #e2e8f0;
+                        border-radius: 18px;
+                        padding: 12px 16px;
+                        max-width: 70%;
+                    }
+
+                    .sender {
+                        font-weight: bold;
+                        color: #1e293b;
+                        margin-bottom: 4px;
+                    }
+
+                    .text {
+                        color: #334155;
+                        line-height: 1.4;
+                    }
+
+                    .input-area {
+                        display: flex;
+                        gap: 12px;
+                        padding: 20px;
+                        background: white;
+                        border-top: 1px solid #e2e8f0;
+                    }
+
+                    .input {
+                        flex: 1;
+                        padding: 14px 16px;
+                        border-radius: 14px;
+                        border: 1px solid #cbd5e1;
+                        font-size: 16px;
+                    }
+
+                    .button {
+                        padding: 14px 20px;
+                        border: none;
+                        border-radius: 14px;
+                        background: #2563eb;
+                        color: white;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    .footer {
+                        text-align: center;
+                        padding: 16px;
+                        color: #64748b;
+                        font-size: 14px;
+                    }
+                "}
+            </style>
+
+            <div class="page">
+                <div class="app-card">
+                    <div class="header">
+                        <h1 class="title">{ "💬 Rafsan YewChat" }</h1>
+                        <div class="subtitle">
+                            { "A simple asynchronous WebSocket chat client built with Rust, WASM, and Yew." }
+                        </div>
+                        <div class="status">
+                            { format!("Status: {}", *connection_status) }
+                        </div>
+                    </div>
+
+                    <div class="chat-area">
+                        {
+                            if messages.is_empty() {
+                                html! {
+                                    <p style="color: #64748b; text-align: center; margin-top: 120px;">
+                                        { "No messages yet. Open another browser tab and start chatting." }
+                                    </p>
+                                }
+                            } else {
+                                html! {
+                                    <>
+                                        {
+                                            for messages.iter().map(|message| {
+                                                html! {
+                                                    <div class="message-row">
+                                                        <div class="avatar">{ "🦀" }</div>
+                                                        <div class="bubble">
+                                                            <div class="sender">{ &message.user }</div>
+                                                            <div class="text">{ &message.message }</div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            })
+                                        }
+                                    </>
+                                }
+                            }
                         }
-                    })
-                }
+                    </div>
+
+                    <div class="input-area">
+                        <input
+                            class="input"
+                            value={(*input_message).clone()}
+                            oninput={oninput_message}
+                            onkeydown={onkeydown_message}
+                            placeholder="Write a message and press Enter..."
+                        />
+
+                        <button class="button" onclick={onclick_send}>
+                            { "Send" }
+                        </button>
+                    </div>
+
+                    <div class="footer">
+                        { "Created for Module 10 Asynchronous Programming — Rafsan's Computer" }
+                    </div>
+                </div>
             </div>
-
-            <input
-                style="width: 75%; padding: 8px;"
-                value={(*input_message).clone()}
-                oninput={oninput_message}
-                onkeydown={onkeydown_message}
-                placeholder="Type message here..."
-            />
-
-            <button
-                style="padding: 8px 16px; margin-left: 8px;"
-                onclick={onclick_send}
-            >
-                { "Send" }
-            </button>
-        </div>
+        </>
     }
 }
 
