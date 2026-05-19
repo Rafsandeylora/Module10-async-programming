@@ -138,6 +138,8 @@ fn main() {
         println!("Rafsan's Computer: done!");
     });
 
+    println!("Rafsan's Computer: task has been spawned, but executor has not run it yet.");
+
     drop(spawner);
 
     executor.run();
