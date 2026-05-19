@@ -1,0 +1,7 @@
+[package]
+name = "tutorial1-timer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures = "0.3"
