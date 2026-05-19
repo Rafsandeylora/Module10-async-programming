@@ -23,3 +23,7 @@ Eksperimen ini bertujuan untuk menjalankan broadcast chat berbasis websocket. Pr
 ### Tujuan
 Eksperimen ini bertujuan untuk mengubah port websocket dari port lama menjadi port 8080.
 
+## Experiment 2.3: Small changes, add IP and Port
+
+### Tujuan
+Eksperimen ini bertujuan untuk menambahkan informasi IP dan port pengirim pada setiap pesan chat.

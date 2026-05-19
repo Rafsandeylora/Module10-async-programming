@@ -43,8 +43,11 @@ async fn handle_connection(
             incoming_message = ws_receiver.next() => {
                 match incoming_message {
                     Some(Ok(Message::Text(text))) => {
-                        println!("Rafsan's Computer: received from {peer_addr}: {text}");
-                        let _ = tx.send(text.to_string());
+                        let decorated_message = format!("Rafsan's Computer - from {peer_addr}: {text}");
+
+                        println!("{decorated_message}");
+
+                        let _ = tx.send(decorated_message);
                     }
                     Some(Ok(Message::Close(_))) => {
                         println!("Rafsan's Computer: {peer_addr} closed the connection");
