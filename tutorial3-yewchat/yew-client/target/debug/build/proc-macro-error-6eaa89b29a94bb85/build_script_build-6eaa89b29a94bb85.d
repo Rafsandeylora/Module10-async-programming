@@ -1,0 +1,5 @@
+/mnt/d/materi kuliah/semester 4/adpro/Module 10/Module10-async-programming/tutorial3-yewchat/yew-client/target/debug/build/proc-macro-error-6eaa89b29a94bb85/build_script_build-6eaa89b29a94bb85.d: /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proc-macro-error-1.0.4/build.rs
+
+/mnt/d/materi kuliah/semester 4/adpro/Module 10/Module10-async-programming/tutorial3-yewchat/yew-client/target/debug/build/proc-macro-error-6eaa89b29a94bb85/build_script_build-6eaa89b29a94bb85: /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proc-macro-error-1.0.4/build.rs
+
+/home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proc-macro-error-1.0.4/build.rs:

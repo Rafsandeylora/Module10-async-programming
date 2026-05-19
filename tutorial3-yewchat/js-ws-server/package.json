@@ -1,0 +1,13 @@
+{
+  "name": "module10-yewchat-ws-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Simple JavaScript WebSocket server for Module 10 YewChat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

@@ -27,3 +27,8 @@ Eksperimen ini bertujuan untuk mengubah port websocket dari port lama menjadi po
 
 ### Tujuan
 Eksperimen ini bertujuan untuk menambahkan informasi IP dan port pengirim pada setiap pesan chat.
+
+## Experiment 3.1: Original code
+
+### Tujuan
+Eksperimen ini bertujuan untuk menjalankan webchat menggunakan Yew sebagai frontend Rust WebAssembly. Webclient dibuat dengan Rust dan dikompilasi ke WebAssembly agar dapat berjalan di browser. Server websocket yang digunakan pada eksperimen ini adalah server JavaScript sederhana.

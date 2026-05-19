@@ -1,0 +1,10 @@
+/mnt/d/materi kuliah/semester 4/adpro/Module 10/Module10-async-programming/tutorial3-yewchat/yew-client/target/wasm32-unknown-unknown/debug/deps/js_sys-00fa23a5f223b1bd.d: /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/lib.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/mod.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/queue.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/task/singlethread.rs
+
+/mnt/d/materi kuliah/semester 4/adpro/Module 10/Module10-async-programming/tutorial3-yewchat/yew-client/target/wasm32-unknown-unknown/debug/deps/libjs_sys-00fa23a5f223b1bd.rlib: /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/lib.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/mod.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/queue.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/task/singlethread.rs
+
+/mnt/d/materi kuliah/semester 4/adpro/Module 10/Module10-async-programming/tutorial3-yewchat/yew-client/target/wasm32-unknown-unknown/debug/deps/libjs_sys-00fa23a5f223b1bd.rmeta: /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/lib.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/mod.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/queue.rs /home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/task/singlethread.rs
+
+/home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/lib.rs:
+/home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/mod.rs:
+/home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/queue.rs:
+/home/rafsan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.98/src/futures/task/singlethread.rs:
