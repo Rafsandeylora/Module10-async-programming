@@ -12,3 +12,8 @@ Eksperimen ini bertujuan untuk memahami bahwa `spawner.spawn(...)` tidak langsun
 
 ### Tujuan
 Eksperimen ini bertujuan untuk memahami efek dari multiple spawn dan peran `drop(spawner)` pada custom executor. Saya membuat tiga task timer yang berjalan secara asynchronous.
+
+## Experiment 2.1: Original code, and how it run
+
+### Tujuan
+Eksperimen ini bertujuan untuk menjalankan broadcast chat berbasis websocket. Program terdiri dari satu server dan beberapa client.
