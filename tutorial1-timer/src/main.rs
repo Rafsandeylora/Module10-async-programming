@@ -131,14 +131,24 @@ fn main() {
     let (executor, spawner) = new_executor_and_spawner();
 
     spawner.spawn(async {
-        println!("Rafsan's Computer: howdy!");
-
+        println!("Rafsan's Computer: howdy from task 1!");
         TimerFuture::new(Duration::new(2, 0)).await;
-
-        println!("Rafsan's Computer: done!");
+        println!("Rafsan's Computer: done from task 1!");
     });
 
-    println!("Rafsan's Computer: task has been spawned, but executor has not run it yet.");
+    spawner.spawn(async {
+        println!("Rafsan's Computer: howdy from task 2!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Rafsan's Computer: done from task 2!");
+    });
+
+    spawner.spawn(async {
+        println!("Rafsan's Computer: howdy from task 3!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Rafsan's Computer: done from task 3!");
+    });
+
+    println!("Rafsan's Computer: all tasks have been spawned.");
 
     drop(spawner);
 
