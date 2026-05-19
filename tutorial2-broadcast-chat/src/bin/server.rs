@@ -4,7 +4,7 @@ use tokio::net::{TcpListener, TcpStream};
 use tokio::sync::broadcast::{self, Sender};
 use tokio_tungstenite::{accept_async, tungstenite::Message};
 
-const ADDR: &str = "127.0.0.1:2000";
+const ADDR: &str = "127.0.0.1:8080";
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {

@@ -3,7 +3,7 @@ use std::error::Error;
 use tokio::io::{self, AsyncBufReadExt, BufReader};
 use tokio_tungstenite::{connect_async, tungstenite::Message};
 
-const SERVER_URL: &str = "ws://127.0.0.1:2000";
+const SERVER_URL: &str = "ws://127.0.0.1:8080";
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {

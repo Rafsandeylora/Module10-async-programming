@@ -17,3 +17,9 @@ Eksperimen ini bertujuan untuk memahami efek dari multiple spawn dan peran `drop
 
 ### Tujuan
 Eksperimen ini bertujuan untuk menjalankan broadcast chat berbasis websocket. Program terdiri dari satu server dan beberapa client.
+
+## Experiment 2.2: Modifying port
+
+### Tujuan
+Eksperimen ini bertujuan untuk mengubah port websocket dari port lama menjadi port 8080.
+
